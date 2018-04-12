@@ -7,8 +7,8 @@ const Schema = mongoose.Schema;
 const userSchema = mongoose.Schema({
 
 
-    created_at: String,
-    userObject: Object
+    email: String,
+    password: Number
 
 });
 
@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({
 mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://localhost:27017/digitalId', { useMongoClient: true });
 
-mongoose.connect('mongodb://rpqb:rpqb123@ds131583.mlab.com:31583/digitalid', {
+mongoose.connect('mongodb://kavitharajasekaran:Pavankumar2007@ds239439.mlab.com:39439/epds', {
     useMongoClient: true
 });
 

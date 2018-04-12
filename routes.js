@@ -2,11 +2,9 @@
 // here only routing is done and if the ro
 'use strict';
 
-var crypto = require('crypto');
-const jwt = require('jsonwebtoken');
+
 var request = require('request');
-var cors = require('cors');
-var dateTime = require('node-datetime');
+var cors = require('cors')
 var Promises = require('promise');
 const date = require('date-and-time');
 const Nexmo = require('nexmo');
@@ -32,51 +30,9 @@ const logger = log4js.getLogger('readypolicy');
 const config = require('./config/config.json');
 
 const register = require('./functions/register');
-const newlogin = require('./functions/newlogin');
+
 const login = require('./functions/login');
-const updateprofile = require('./functions/updateprofile');
-const verifyemail = require('./functions/emailverification');
-const verifyphone = require('./functions/phoneverification');
-const getnewotp = require('./functions/getnewotp');
-const setpassword = require('./functions/setpassword');
-const deleteuser = require('./functions/deleteuser');
-const getotpcount = require('./functions/getotpcount');
-const registerpublicadjuster = require('./functions/registerpublicadjuster');
-const publicadjusterList = require('./functions/publicadjusterList');
-const userfullname = require('./functions/userfullname');
-const User = require('./functions/getUser');
 
-const motorsavepolicy = require('./functions/motorsavepolicy');
-const addPolicy = require('./functions/addPolicy');
-const motorfetchSavePolicy = require('./functions/motorfetchSavePolicy');
-const motordeletesavepolicy = require('./functions/motordeletesavepolicy');
-const policydetails = require('./functions/policydetails');
-const savetransaction = require('./functions/savetransaction');
-const fetchMotorIssuedPolicy = require('./functions/fetchMotorIssuedPolicy');
-const readRequest = require('./functions/readRequest');
-const readIndex = require('./functions/readIndex');
-const readAllRequest = require('./functions/readAllRequest');
-const updatetransaction = require('./functions/updatetransaction');
-const brandnewupdatevehical = require('./functions/brandnewupdatevehical');
-const calculatepremium = require('./functions/calculatepremium');
-const gproposal = require('./functions/gproposal');
-const calculatecarpremium = require('./functions/calculatecarpremium');
-const updatevehicalcardetails = require('./functions/updatevehicaldetails');
-const gproposalcar = require('./functions/gproposalcar');
-const notifyClaim = require('./functions/notifyClaim');
-const createClaim = require('./functions/createClaim');
-const rejectClaim = require('./functions/rejectClaim');
-const examineClaim = require('./functions/examineClaim');
-const negotiateClaim = require('./functions/negotiateClaim');
-const negotiateClaimFind = require('./functions/negotiateClaimFind');
-const approveClaim = require('./functions/approveClaim');
-const settleClaim = require('./functions/settleClaim');
-const fetchClaimlist = require('./functions/fetchClaimlist');
-
-const nexmo = new Nexmo({
-    apiKey: 'c7ae10d1',
-    apiSecret: '5d6766133225cd92'
-});
 
 // connection to email API
 var transporter = nodemailer.createTransport("SMTP", {
